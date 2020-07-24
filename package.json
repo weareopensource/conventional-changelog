@@ -1,6 +1,6 @@
 {
   "name": "@weareopensource/conventional-changelog",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Commitizen adapter following the conventional-changelog format with emojis choice.",
   "keywords": [
     "commitlint",
@@ -16,12 +16,12 @@
     "format": "prettier --write *.js",
     "semantic-release": "semantic-release"
   },
-  "homepage": "https://github.com/WeAreOpenSourceProjects/waos-conventional-changelog",
+  "homepage": "https://github.com/weareopensource/conventional-changelog",
   "repository": {
     "type": "git",
-    "url": "https://github.com/WeAreOpenSourceProjects/waos-conventional-changelog.git"
+    "url": "https://github.com/weareopensource/conventional-changelog.git"
   },
-  "author": "Pierre Brisorgueil <brisorgueilp@gmail.com> for the fork, Jim Cummins <jimthedev@gmail.com>",
+  "author": "Pierre Brisorgueil <pierre@weareopensource.me> for the fork, Jim Cummins <jimthedev@gmail.com>",
   "license": "MIT",
   "husky": {
     "hooks": {
