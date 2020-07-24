@@ -40,21 +40,21 @@
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
     "commitizen": "^4.1.2",
+    "conventional-changelog": "^3.1.21",
     "cosmiconfig": "^6.0.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
     "mock-require": "^3.0.3",
     "prettier": "^2.0.5",
     "semantic-release": "^17.1.1",
-    "semver": "^7.3.2",
-    "waos-conventional-changelog": "^1.10.0",
-    "eslint": "^7.5.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0"
+    "semver": "^7.3.2"
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/waos-conventional-changelog"
+      "path": "./node_modules/conventional-changelog"
     }
   },
   "bugs": {
