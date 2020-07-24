@@ -1,0 +1,60 @@
+{
+  "name": "waos-conventional-changelog",
+  "version": "0.0.0-development",
+  "description": "Commitizen adapter following the conventional-changelog format with emojis choice.",
+  "keywords": [
+    "commitlint",
+    "conventional-changelog",
+    "commitizen",
+    "cz-cli",
+    "emoji"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "test": "jest",
+    "format": "prettier --write *.js",
+    "semantic-release": "semantic-release"
+  },
+  "homepage": "https://github.com/WeAreOpenSourceProjects/waos-conventional-changelog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WeAreOpenSourceProjects/waos-conventional-changelog.git"
+  },
+  "author": "Pierre Brisorgueil <brisorgueilp@gmail.com> for the fork, Jim Cummins <jimthedev@gmail.com>",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "conventional-commit-types": "^2.2.0",
+    "lodash.map": "^4.6.0",
+    "longest": "^2.0.1",
+    "right-pad": "^1.0.1",
+    "word-wrap": "^1.2.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "commitizen": "^3.0.7",
+    "cosmiconfig": "^5.2.0",
+    "husky": "^2.0.0",
+    "jest": "^24.7.1",
+    "mock-require": "^3.0.3",
+    "prettier": "^1.16.4",
+    "semantic-release": "^15.13.3",
+    "semver": "^6.0.0",
+    "waos-conventional-changelog": "^1.2.0",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/waos-conventional-changelog"
+    }
+  }
+}
