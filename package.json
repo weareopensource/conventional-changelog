@@ -1,6 +1,6 @@
 {
-  "name": "waos-conventional-changelog",
-  "version": "0.0.0-development",
+  "name": "@weareopensource/conventional-changelog",
+  "version": "0.0.1",
   "description": "Commitizen adapter following the conventional-changelog format with emojis choice.",
   "keywords": [
     "commitlint",
