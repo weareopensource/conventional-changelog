@@ -9,7 +9,7 @@ Prompts for [conventional changelog](https://github.com/conventional-changelog/c
 
 Our rules on this dev, **Quick** / **Simple** / **Lite**.
 
-![gif](http://waos.ovh/content/gif/waos-conventional-changelog.gif)
+![gif](https://github.com/weareopensource/conventional-changelog/blob/master/assets/demo.gif)
 
 ## :boom: Installation
 
