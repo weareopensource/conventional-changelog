@@ -36,18 +36,6 @@ module.exports = (options) => {
             return value.trim().toLowerCase();
           },
         }, {
-          type: 'confirm',
-          name: 'isEmoji',
-          message: 'Emoji by default ?',
-          default: true,
-        }, {
-          type: 'input',
-          name: 'emoji',
-          message: 'Your own Emoji :\n',
-          when(answers) {
-            return !answers.isEmoji;
-          },
-        }, {
           type: 'input',
           name: 'subject',
           message(answers) {
@@ -156,8 +144,8 @@ module.exports = (options) => {
         const scope = answers.scope ? `(${answers.scope})` : '';
 
         // add emoji
-        let emoji = '';
-        if (answers.isEmoji) emoji = answers.isEmoji ? ` ${config.emojis[answers.type]}` : ` ${answers.emoji}`;
+        let emoji = ` ${config.emojis[answers.type]}`;
+
         // Hard limit this line in the validate
         const head = `${answers.type + scope}: ${answers.subject}${emoji}`;
 
