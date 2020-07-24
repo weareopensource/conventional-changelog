@@ -14,7 +14,7 @@ const defaultOptions = {
   maxHeaderWidth: 100,
 };
 
-const type = 'func';
+const type = 'feat';
 const scope = 'everything';
 const subject = 'testing123';
 const longBody = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
@@ -129,7 +129,7 @@ describe('commit message', () => {
         type,
         subject,
       }),
-    ).toEqual(`${type}: ${subject}`);
+    ).toEqual(`${type}: ${subject} ✨`);
   });
   test('only header w/ scope', () => {
     expect(
@@ -138,7 +138,7 @@ describe('commit message', () => {
         scope,
         subject,
       }),
-    ).toEqual(`${type}(${scope}): ${subject}`);
+    ).toEqual(`${type}(${scope}): ${subject} ✨`);
   });
   test('header and body w/ out scope', () => {
     expect(
@@ -147,7 +147,7 @@ describe('commit message', () => {
         subject,
         body,
       }),
-    ).toEqual(`${type}: ${subject}\n\n${body}`);
+    ).toEqual(`${type}: ${subject} ✨\n\n${body}`);
   });
   test('header and body w/ scope', () => {
     expect(
@@ -157,7 +157,7 @@ describe('commit message', () => {
         subject,
         body,
       }),
-    ).toEqual(`${type}(${scope}): ${subject}\n\n${body}`);
+    ).toEqual(`${type}(${scope}): ${subject} ✨\n\n${body}`);
   });
   test('header, body and issues w/ out scope', () => {
     expect(
@@ -167,7 +167,7 @@ describe('commit message', () => {
         body,
         issues,
       }),
-    ).toEqual(`${type}: ${subject}\n\n${body}\n\n${issues}`);
+    ).toEqual(`${type}: ${subject} ✨\n\n${body}\n\n${issues}`);
   });
   test('header, body and issues w/ scope', () => {
     expect(
@@ -178,7 +178,7 @@ describe('commit message', () => {
         body,
         issues,
       }),
-    ).toEqual(`${type}(${scope}): ${subject}\n\n${body}\n\n${issues}`);
+    ).toEqual(`${type}(${scope}): ${subject} ✨\n\n${body}\n\n${issues}`);
   });
   test('header, body and long issues w/ out scope', () => {
     expect(
@@ -188,7 +188,7 @@ describe('commit message', () => {
         body,
         issues: longIssues,
       }),
-    ).toEqual(`${type}: ${subject}\n\n${body}\n\n${longIssues}`);
+    ).toEqual(`${type}: ${subject} ✨\n\n${body}\n\n${longIssues}`);
   });
   test('header, body and long issues w/ scope', () => {
     expect(
@@ -199,7 +199,7 @@ describe('commit message', () => {
         body,
         issues: longIssues,
       }),
-    ).toEqual(`${type}(${scope}): ${subject}\n\n${body}\n\n${longIssues}`);
+    ).toEqual(`${type}(${scope}): ${subject} ✨\n\n${body}\n\n${longIssues}`);
   });
   test('header and long body w/ out scope', () => {
     expect(
@@ -208,7 +208,7 @@ describe('commit message', () => {
         subject,
         body: longBody,
       }),
-    ).toEqual(`${type}: ${subject}\n\n${longBody}`);
+    ).toEqual(`${type}: ${subject} ✨\n\n${longBody}`);
   });
   test('header and long body w/ scope', () => {
     expect(
@@ -218,7 +218,7 @@ describe('commit message', () => {
         subject,
         body: longBody,
       }),
-    ).toEqual(`${type}(${scope}): ${subject}\n\n${longBody}`);
+    ).toEqual(`${type}(${scope}): ${subject} ✨\n\n${longBody}`);
   });
   test('header, long body and issues w/ out scope', () => {
     expect(
@@ -228,7 +228,7 @@ describe('commit message', () => {
         body: longBody,
         issues,
       }),
-    ).toEqual(`${type}: ${subject}\n\n${longBody}\n\n${issues}`);
+    ).toEqual(`${type}: ${subject} ✨\n\n${longBody}\n\n${issues}`);
   });
   test('header, long body and issues w/ scope', () => {
     expect(
@@ -239,7 +239,7 @@ describe('commit message', () => {
         body: longBody,
         issues,
       }),
-    ).toEqual(`${type}(${scope}): ${subject}\n\n${longBody}\n\n${issues}`);
+    ).toEqual(`${type}(${scope}): ${subject} ✨\n\n${longBody}\n\n${issues}`);
   });
   test('header, long body and long issues w/ out scope', () => {
     expect(
@@ -249,7 +249,7 @@ describe('commit message', () => {
         body: longBody,
         issues: longIssues,
       }),
-    ).toEqual(`${type}: ${subject}\n\n${longBody}\n\n${longIssues}`);
+    ).toEqual(`${type}: ${subject} ✨\n\n${longBody}\n\n${longIssues}`);
   });
   test('header, long body and long issues w/ scope', () => {
     expect(
@@ -261,7 +261,7 @@ describe('commit message', () => {
         issues: longIssues,
       }),
     ).toEqual(
-      `${type}(${scope}): ${subject}\n\n${longBody}\n\n${longIssues}`,
+      `${type}(${scope}): ${subject} ✨\n\n${longBody}\n\n${longIssues}`,
     );
   });
   test('header, long body, breaking change, and long issues w/ scope', () => {
@@ -275,7 +275,7 @@ describe('commit message', () => {
         issues: longIssues,
       }),
     ).toEqual(
-      `${type}(${scope}): ${subject}\n\n${longBody}\n\n${breakingChange}${breaking}\n\n${longIssues}`,
+      `${type}(${scope}): ${subject} ✨\n\n${longBody}\n\n${breakingChange}${breaking}\n\n${longIssues}`,
     );
   });
   test('header, long body, breaking change (with prefix entered), and long issues w/ scope', () => {
@@ -289,7 +289,7 @@ describe('commit message', () => {
         issues: longIssues,
       }),
     ).toEqual(
-      `${type}(${scope}): ${subject}\n\n${longBody}\n\n${breakingChange}${breaking}\n\n${longIssues}`,
+      `${type}(${scope}): ${subject} ✨\n\n${longBody}\n\n${breakingChange}${breaking}\n\n${longIssues}`,
     );
   });
 });
