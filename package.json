@@ -19,9 +19,9 @@
   "homepage": "https://github.com/weareopensource/conventional-changelog",
   "repository": {
     "type": "git",
-    "url": "https://github.com/weareopensource/conventional-changelog.git"
+    "url": "git+https://github.com/weareopensource/conventional-changelog.git"
   },
-  "author": "Pierre Brisorgueil <pierre@weareopensource.me> for the fork, Jim Cummins <jimthedev@gmail.com>",
+  "author": "Pierre Brisorgueil <pierre@weareopensource.me>",
   "license": "MIT",
   "husky": {
     "hooks": {
@@ -56,5 +56,11 @@
     "commitizen": {
       "path": "./node_modules/waos-conventional-changelog"
     }
+  },
+  "bugs": {
+    "url": "https://github.com/weareopensource/conventional-changelog/issues"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
