@@ -54,7 +54,7 @@ module.exports = (options) => {
             return (
               `Short, imperative tense description of the change (max ${
                 helpers.maxSummaryLength(options, answers)
-              } chars):\n`
+              } chars):`
             );
           },
           default: options.defaultSubject,
@@ -82,7 +82,7 @@ module.exports = (options) => {
           type: 'input',
           name: 'body',
           message:
-            'Longer description of the change: (enter to skip)\n',
+            'Longer description of the change: (enter to skip):',
           default: options.defaultBody,
         },
         {
@@ -96,7 +96,7 @@ module.exports = (options) => {
           name: 'breakingBody',
           default: '-',
           message:
-            'Breaking change requires a body :\n',
+            'Breaking change requires a body :',
           when(answers) {
             return answers.isBreaking && !answers.body;
           },
@@ -110,7 +110,7 @@ module.exports = (options) => {
         {
           type: 'input',
           name: 'breaking',
-          message: 'Describe the breaking changes:\n',
+          message: 'Describe the breaking changes:',
           when(answers) {
             return answers.isBreaking;
           },
@@ -127,7 +127,7 @@ module.exports = (options) => {
           name: 'issuesBody',
           default: '-',
           message:
-            'If issues are closed, the commit requires a body :\n',
+            'If issues are closed, the commit requires a body:',
           when(answers) {
             return (
               answers.isIssueAffected && !answers.body && !answers.breakingBody
@@ -137,7 +137,7 @@ module.exports = (options) => {
         {
           type: 'input',
           name: 'issues',
-          message: 'Issue references, "fix #123", "close #123" :\n',
+          message: 'Issue references, "fix #123", "close #123":',
           when(answers) {
             return answers.isIssueAffected;
           },
