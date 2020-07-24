@@ -14,7 +14,7 @@ module.exports = (options) => {
 
   const length = longest(Object.keys(types)).length + 1;
   const choices = map(types, (type, key) => ({
-    name: `${rightPad(`${key}:`, length)} ${type.description} ${config.emojis[key]}`,
+    name: `${config.emojis[key]}  ${rightPad(`${key}`, length)} ${type.description}`,
     value: key,
   }));
 

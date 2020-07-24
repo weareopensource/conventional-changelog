@@ -4,10 +4,10 @@
         "fix": "🐛",
         "docs": "📝",
         "style": "💄",
-        "refactor": "♻️",
+        "refactor": "♻️ ",
         "perf": "⚡️",
         "test": "✅",
-        "build": "🏗",
+        "build": "🏗 ",
         "ci": "👷🏼",
         "chore": "📦",
         "revert": "⏪"
