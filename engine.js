@@ -24,13 +24,13 @@ module.exports = (options) => {
         {
           type: 'list',
           name: 'type',
-          message: 'Select the type of change that you\'re committing:',
+          message: 'Type of change that you\'re committing:',
           choices,
           default: options.defaultType,
         }, {
           type: 'input',
           name: 'scope',
-          message: 'What is the scope of this change (e.g. component or file name): (press enter to skip)',
+          message: 'Scope of this change, component or folder name: (enter to skip)',
           default: options.defaultScope,
           filter(value) {
             return value.trim().toLowerCase();
@@ -38,12 +38,12 @@ module.exports = (options) => {
         }, {
           type: 'confirm',
           name: 'isEmoji',
-          message: 'Add Emoji by default ?',
+          message: 'Emoji by default ?',
           default: true,
         }, {
           type: 'input',
           name: 'emoji',
-          message: 'Add your own Emoji :\n',
+          message: 'Your own Emoji :\n',
           when(answers) {
             return !answers.isEmoji;
           },
@@ -52,7 +52,7 @@ module.exports = (options) => {
           name: 'subject',
           message(answers) {
             return (
-              `Write a short, imperative tense description of the change (max ${
+              `Short, imperative tense description of the change (max ${
                 helpers.maxSummaryLength(options, answers)
               } chars):\n`
             );
@@ -82,13 +82,13 @@ module.exports = (options) => {
           type: 'input',
           name: 'body',
           message:
-            'Provide a longer description of the change: (press enter to skip)\n',
+            'Longer description of the change: (enter to skip)\n',
           default: options.defaultBody,
         },
         {
           type: 'confirm',
           name: 'isBreaking',
-          message: 'Are there any breaking changes?',
+          message: 'Breaking changes?',
           default: false,
         },
         {
@@ -96,7 +96,7 @@ module.exports = (options) => {
           name: 'breakingBody',
           default: '-',
           message:
-            'A BREAKING CHANGE commit requires a body. Please enter a longer description of the commit itself:\n',
+            'Breaking change requires a body :\n',
           when(answers) {
             return answers.isBreaking && !answers.body;
           },
@@ -119,7 +119,7 @@ module.exports = (options) => {
         {
           type: 'confirm',
           name: 'isIssueAffected',
-          message: 'Does this change affect any open issues?',
+          message: 'Affect any open issues?',
           default: !!options.defaultIssues,
         },
         {
@@ -127,7 +127,7 @@ module.exports = (options) => {
           name: 'issuesBody',
           default: '-',
           message:
-            'If issues are closed, the commit requires a body. Please enter a longer description of the commit itself:\n',
+            'If issues are closed, the commit requires a body :\n',
           when(answers) {
             return (
               answers.isIssueAffected && !answers.body && !answers.breakingBody
@@ -137,7 +137,7 @@ module.exports = (options) => {
         {
           type: 'input',
           name: 'issues',
-          message: 'Add issue references (e.g. "fix #123", "re #123".):\n',
+          message: 'Issue references, "fix #123", "close #123" :\n',
           when(answers) {
             return answers.isIssueAffected;
           },
