@@ -41,7 +41,7 @@
     "@commitlint/config-conventional": "^9.1.1",
     "commitizen": "^4.1.2",
     "conventional-changelog": "^3.1.21",
-    "cosmiconfig": "^6.0.0",
+    "cosmiconfig": "^7.0.0",
     "eslint": "^7.5.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
