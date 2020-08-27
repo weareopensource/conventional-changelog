@@ -11,6 +11,13 @@ Our rules on this dev, **Quick** / **Simple** / **Lite**.
 
 ![gif](https://github.com/weareopensource/conventional-changelog/blob/master/assets/demo.gif)
 
+Quick links :
+
+* [Mindset and what we would like to create](https://weareopensource.me/)
+* [How to start a project and maintain updates from stacks](https://blog.weareopensource.me/start-a-project-and-maintain-updates/)
+* [Global roadmap and  ideas about stacks](https://github.com/orgs/weareopensource/projects/3)
+* [How to contribute and help us](https://blog.weareopensource.me/how-to-contribute/)
+
 ## :boom: Installation
 
 Make sure you have installed all of the following prerequisites on your development machine:
