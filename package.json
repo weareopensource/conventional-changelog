@@ -11,7 +11,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "commit": "git-cz",
+    "commit": "npx cz",
     "test": "jest",
     "format": "prettier --write *.js",
     "semantic-release": "semantic-release"
@@ -23,11 +23,6 @@
   },
   "author": "Pierre Brisorgueil <pierre@weareopensource.me>",
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "dependencies": {
     "chalk": "^4.1.0",
     "conventional-commit-types": "^3.0.0",
