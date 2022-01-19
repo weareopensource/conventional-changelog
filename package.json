@@ -44,7 +44,7 @@
     "jest": "^27.0.4",
     "mock-require": "^3.0.3",
     "prettier": "^2.0.5",
-    "semantic-release": "^18.0.0",
+    "semantic-release": "^19.0.2",
     "semver": "^7.3.2"
   },
   "config": {
